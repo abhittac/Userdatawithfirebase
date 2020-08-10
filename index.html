@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="text-center text-info display-3">Add User Data</h1>
+ <div class="container">
+    <div class="form-group">
+      <label for="">Update Id</label>
+      <input type="number"
+        class="form-control "  id="id" aria-describedby="helpId" placeholder="What to Update any user data" >
+        <small id="usertext" class="form-text text-muted">Help text</small>
+  
+      <label for="">Name</label>
+      <input type="text"
+        class="form-control" name="" id="name" aria-describedby="helpId" placeholder="Name">
+        <small id="nametext" class="form-text text-muted">Help text</small>
+        <label for="">Age</label>
+      <input type="text"
+        class="form-control" name="" id="age" aria-describedby="helpId" placeholder="Age">
+        <small id="agetext" class="form-text text-muted">Help text</small>
+       <br> <button class="btn btn-info btn-block" onclick="add()">Add</button>
+       <button class="btn btn-info btn-block" onclick="update()">Update</button>
+       <button class="btn btn-info btn-block" onclick="del()">Delete</button>
+       
+       <button class="btn btn-info btn-block" onclick="get()">Get Data</button>
+    </div>
+    <table class="table table-striped table-inverse table-responsive" >
+      <thead class="thead-inverse" >
+        <tr>
+          <th>User-Id</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        </thead>
+        <tbody id="body">
+
+        </tbody>
+    </table>
+</div><!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCSbqjr6NO8mGREixJyUogkkJsnGSAkPO8",
+    authDomain: "abhishek-18574.firebaseapp.com",
+    databaseURL: "https://abhishek-18574.firebaseio.com",
+    projectId: "abhishek-18574",
+    storageBucket: "abhishek-18574.appspot.com",
+    messagingSenderId: "940231167989",
+    appId: "1:940231167989:web:3ad2646ab8a8aeb500dabc",
+    measurementId: "G-NGCWZX5GKD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="file.js"></script>
+</body>
+</html>

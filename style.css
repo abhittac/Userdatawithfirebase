@@ -1,0 +1,7 @@
+.user{
+    border: 2px solid  red !important;
+    outline: none !important;
+}
+.user:focus{
+    box-shadow: 0 0 2px red,0 0 2px red,0 0 2px red !important;
+}
